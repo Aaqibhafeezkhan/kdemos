@@ -102,7 +102,13 @@ Este proyecto está listo para ser desplegado en plataformas como Vercel, Netlif
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Si tienes una mejora o solución a un problema, por favor abre un pull request.
+Las contribuciones son bienvenidas, y participamos en **Hacktoberfest**. 
+
+- Empieza por las [good first issues](https://github.com/francordel/kdemos/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22): cada una indica qué ficheros tocar y cómo probarlo.
+- Lee la [guía de contribución](.github/CONTRIBUTING.md) (setup en 3 comandos con `REACT_APP_DB_MODE=mock`, sin credenciales).
+- ¿Hablas otro idioma? Traducir KDEMOS es una gran primera contribución.
+
+**English:** contributions are welcome and we take part in Hacktoberfest. Check the [good first issues](https://github.com/francordel/kdemos/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and the [contributing guide](.github/CONTRIBUTING.md).
 
 ## Licencia
 

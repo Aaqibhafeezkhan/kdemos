@@ -1,0 +1,17 @@
+name: New language
+description: Offer to translate KDEMOS into a new language
+labels: [translation, i18n]
+body:
+  - type: input
+    id: lang
+    attributes:
+      label: Language and code
+      placeholder: Turkish (tr)
+    validations:
+      required: true
+  - type: checkboxes
+    id: native
+    attributes:
+      label: Fluency
+      options:
+        - label: I am a native or fluent speaker

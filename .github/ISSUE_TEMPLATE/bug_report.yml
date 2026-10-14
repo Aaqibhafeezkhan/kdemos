@@ -1,0 +1,29 @@
+name: Bug report
+description: Something on kdemos.com or in the code is not working
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Create a calendar
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Browser / device / language
+      placeholder: Chrome 129 on Android, app in Catalan
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or console errors
