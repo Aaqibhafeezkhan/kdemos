@@ -46,6 +46,11 @@ Doodle, When2meet, Rallly, Lettucemeet, NeedToMeet, Rally, Calendly group polls.
 - https://kdemos.com/en/rallly-alternative/ (Rallly, EN) · https://kdemos.com/alternativa-rallly/ (ES)
 - https://kdemos.com/encuesta-doodle-gratis/ (free Doodle-style poll, ES)
 
+## Guides
+
+- https://kdemos.com/como-organizar-quedada-whatsapp/ (how to organise a meetup on WhatsApp, ES) · https://kdemos.com/en/how-to-schedule-group-meeting/ (EN)
+- https://kdemos.com/organizar-quedada-con-ia/ (using ChatGPT and AI assistants to organise a group plan: what works, what fails, and the security risks of letting an AI agent manage your calendar, ES)
+
 ---
 
 # KDemos (español)
