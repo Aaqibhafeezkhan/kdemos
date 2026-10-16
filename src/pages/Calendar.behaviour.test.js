@@ -34,6 +34,15 @@ const renderCalendar = (entry = '/mycal?name=Ana') =>
     </LanguageProvider>
   );
 
+// Pulsa la última celda de la cuadrícula del mes: siempre es hoy o futura,
+// así que se puede seleccionar sea cual sea la fecha en que corre el test.
+// (No dependemos de la flecha "siguiente": en jsdom no cambia de mes.)
+const pressFutureDay = async () => {
+  await screen.findByText('Finalizar');
+  const cells = document.querySelectorAll('.rbc-date-cell');
+  fireEvent.mouseDown(cells[cells.length - 1].firstElementChild);
+};
+
 beforeEach(() => {
   localStorage.setItem('calendar-language', 'es');
   jest.clearAllMocks();
@@ -68,12 +77,8 @@ describe('Calendar — flujo de franjas horarias (BDD)', () => {
   it('marca un día como disponible, elige una franja y la persiste al finalizar', async () => {
     renderCalendar();
 
-    // Vamos al mes siguiente para asegurar que todos los días son futuros (seleccionables)
-    const nextBtn = (await screen.findByTestId('NavigateNextIcon')).closest('button');
-    fireEvent.click(nextBtn);
-
-    // When: el usuario pulsa el día 15 (mes siguiente => futuro)
-    fireEvent.mouseDown(await screen.findByText('15'));
+    // When: el usuario pulsa un día futuro
+    await pressFutureDay();
 
     // And: elige "Disponible"
     fireEvent.click(await screen.findByRole('button', { name: 'Disponible' }));
@@ -103,10 +108,7 @@ describe('Calendar — flujo de franjas horarias (BDD)', () => {
   it('un día "No disponible" no guarda franjas', async () => {
     renderCalendar();
 
-    const nextBtn = (await screen.findByTestId('NavigateNextIcon')).closest('button');
-    fireEvent.click(nextBtn);
-
-    fireEvent.mouseDown(await screen.findByText('16'));
+    await pressFutureDay();
 
     // "No disponible" cierra el diálogo al instante (sin franjas)
     fireEvent.click(await screen.findByRole('button', { name: 'No disponible' }));
