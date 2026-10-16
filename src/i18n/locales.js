@@ -35,8 +35,16 @@ export const LANGUAGE_NAMES = {
 // Fecha larga sin año ("jueves, 16 de julio"), con el patrón natural por idioma
 export const formatDayLong = (date, language) => {
   const locale = DATE_LOCALES[language] || enUS;
+
+  if (language === 'ca') {
+    const day = format(date, 'EEEE, d', { locale });
+    const month = format(date, 'MMMM', { locale });
+    const preposition = /^[aeiouàèéíïòóúü]/i.test(month) ? 'd’' : 'de ';
+    return `${day} ${preposition}${month}`;
+  }
+
   const pattern =
-    language === 'es' || language === 'ca'
+    language === 'es'
       ? "EEEE, dd 'de' MMMM"
       : language === 'en'
         ? 'EEEE, MMMM dd'
