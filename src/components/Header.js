@@ -21,7 +21,8 @@ import {
   GitHub as GitHubIcon,
   Language as LanguageIcon,
   LightMode as LightModeIcon,
-  DarkMode as DarkModeIcon
+  DarkMode as DarkModeIcon,
+  Article as ArticleIcon
 } from '@mui/icons-material';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -256,7 +257,20 @@ function Header() {
             >
               <HomeIcon />
             </IconButton>
-            
+
+            <IconButton
+              component="a"
+              href="/blog/"
+              aria-label="Blog"
+              title="Blog"
+              sx={{
+                color: 'text.secondary',
+                '&:hover': { backgroundColor: 'rgba(0, 122, 255, 0.04)', color: 'primary.main' },
+              }}
+            >
+              <ArticleIcon />
+            </IconButton>
+
             {/* Mobile Language Selector */}
             <Select
               value={language}

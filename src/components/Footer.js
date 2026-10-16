@@ -13,7 +13,8 @@ import {
 import {
   Email as EmailIcon,
   Favorite as FavoriteIcon,
-  Code as CodeIcon
+  Code as CodeIcon,
+  Article as ArticleIcon
 } from '@mui/icons-material';
 
 function Footer() {
@@ -159,7 +160,26 @@ function Footer() {
             </Typography>
           </Stack>
 
-          {/* Right Section - Contact */}
+          {/* Right Section - Blog + Contact */}
+          <Stack direction="row" spacing={1} alignItems="center">
+          <Button
+            href="/blog/"
+            startIcon={<ArticleIcon sx={{ fontSize: { xs: 16, md: 18 } }} />}
+            sx={{
+              color: 'text.secondary',
+              fontSize: { xs: '0.75rem', md: '0.875rem' },
+              fontWeight: 500,
+              textTransform: 'none',
+              px: { xs: 1.5, md: 2 },
+              py: { xs: 0.75, md: 1 },
+              '&:hover': {
+                backgroundColor: 'rgba(0, 122, 255, 0.04)',
+                color: 'primary.main'
+              }
+            }}
+          >
+            Blog
+          </Button>
           <Button
             href="mailto:fran.j.cordel@gmail.com"
             startIcon={<EmailIcon sx={{ fontSize: { xs: 16, md: 18 } }} />}
@@ -182,6 +202,7 @@ function Footer() {
           >
             {t('contact')}
           </Button>
+          </Stack>
         </Stack>
 
       </Toolbar>
