@@ -84,14 +84,17 @@ describe('translation key parity', () => {
       const missing = englishKeys.filter((key) => !keySet.has(key));
       const extra = keys.filter((key) => !englishKeySet.has(key));
 
-      expect(
-        missing,
-        `${language} is missing English keys: ${missing.join(', ') || '(none)'}`
-      ).toEqual([]);
-      expect(
-        extra,
-        `${language} has keys not present in English: ${extra.join(', ') || '(none)'}`
-      ).toEqual([]);
+      if (missing.length > 0) {
+        throw new Error(
+          `${language} is missing English keys: `${missing.join(', ')}
+        );
+      }
+
+      if (extra.length > 0) {
+        throw new Error(
+          `${language} has keys not present in English: `${extra.join(', ')}
+        );
+      }
     });
   });
 });
