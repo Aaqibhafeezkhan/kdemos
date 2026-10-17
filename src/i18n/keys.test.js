@@ -75,7 +75,7 @@ const englishKeys = getDictionaryKeys('en');
 
 describe('translation key parity', () => {
   Object.entries(dictionaries).forEach(([language, dictionary]) => {
-    it(`${language} has exactly the English translation keys`, () => {
+    test(`${language} has exactly the English translation keys`, () => {
       const keys = Array.isArray(dictionary)
         ? dictionary
         : Object.keys(dictionary).sort();
