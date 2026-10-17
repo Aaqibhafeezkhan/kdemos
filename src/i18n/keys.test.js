@@ -85,15 +85,11 @@ describe('translation key parity', () => {
       const extra = keys.filter((key) => !englishKeySet.has(key));
 
       if (missing.length > 0) {
-        throw new Error(
-          `${language} is missing English keys: `${missing.join(', ')}
-        );
+        throw new Error(`${language} is missing English keys: ${missing.join(', ')}`);
       }
 
       if (extra.length > 0) {
-        throw new Error(
-          `${language} has keys not present in English: `${extra.join(', ')}
-        );
+        throw new Error(`${language} has keys not present in English: ${extra.join(', ')}`);
       }
     });
   });
