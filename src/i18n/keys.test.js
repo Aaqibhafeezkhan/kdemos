@@ -74,9 +74,8 @@ const dictionaries = {
 const englishKeys = getDictionaryKeys('en');
 
 describe('translation key parity', () => {
-  it.each(Object.entries(dictionaries))(
-    '%s has exactly the English translation keys',
-    (language, dictionary) => {
+  Object.entries(dictionaries).forEach(([language, dictionary]) => {
+    it(`${language} has exactly the English translation keys`, () => {
       const keys = Array.isArray(dictionary)
         ? dictionary
         : Object.keys(dictionary).sort();
@@ -93,6 +92,6 @@ describe('translation key parity', () => {
         extra,
         `${language} has keys not present in English: ${extra.join(', ') || '(none)'}`
       ).toEqual([]);
-    }
-  );
+    });
+  });
 });
