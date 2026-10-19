@@ -29,13 +29,13 @@ Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu máquina.
 1. Clona este repositorio en tu máquina local:
 
 ```bash
-git clone https://github.com/tu-usuario/calendario-quedadas.git
+git clone https://github.com/francordel/kdemos.git
 ```
 
 2. Navega al directorio del proyecto:
 
 ```bash
-cd calendario-quedadas
+cd kdemos
 ```
 
 3. Instala las dependencias del proyecto:
@@ -48,13 +48,15 @@ npm install
 
 El proyecto puede funcionar con tres modos de almacenamiento de datos: `mock`, `firebase`, o `cloudflare`.
 
+Para el desarrollo local, se recomienda usar el modo `mock`, que no requiere credenciales.
+
 Configura el archivo `.env` con el modo deseado:
 
 ```env
-REACT_APP_DB_MODE=cloudflare
+REACT_APP_DB_MODE=mock
 ```
 
-### Configuración de Firebase (modo firebase o desarrollo local)
+### Configuración de Firebase (opcional, no necesaria para el desarrollo local con modo mock)
 
 1. Crea un proyecto en Firebase Console.
 2. Activa la base de datos Firestore.
