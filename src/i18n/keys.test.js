@@ -8,6 +8,7 @@ import pl from './pl';
 import da from './da';
 import sv from './sv';
 import no from './no';
+import tr from './tr';
 
 const fs = require('fs');
 const path = require('path');
@@ -68,7 +69,8 @@ const dictionaries = {
   pl,
   da,
   sv,
-  no
+  no,
+  tr
 };
 
 const englishKeys = getDictionaryKeys('en');
