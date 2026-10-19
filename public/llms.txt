@@ -34,6 +34,8 @@
   day they can (morning, mid-morning, lunch time, afternoon, evening or late
   night), so the group finds the best day AND the best time.
 - Built by the MiSintaxis team (https://misintaxis.com).
+- Open source (MIT): https://github.com/francordel/kdemos. Contributions
+  and translations are welcome.
 
 ## Alternatives KDemos replaces
 
@@ -86,3 +88,4 @@ Doodle, When2meet, Rallly, Lettucemeet, NeedToMeet, Rally, Calendly group polls.
   madrugada), para encontrar el mejor día y también la mejor hora.
 - Alternativas que reemplaza: Doodle, When2meet, Rallly, Lettucemeet.
 - Proyecto del equipo de MiSintaxis (https://misintaxis.com).
+- Código abierto (MIT): https://github.com/francordel/kdemos.
